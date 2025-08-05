@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-links a {
+    color: white;
+    /* assuming you want links visible on dark bg */
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}

@@ -1,38 +1,72 @@
+/* General App container */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #f9f9f9;
+  /* Soft off-white */
   min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e1e1e;
+  /* Dark gray */
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Logo */
+.logo {
+  height: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navigation links */
+.nav-links a {
+  color: #a66eff;
+  /* Purple accent */
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d8c4ff;
+  /* Lavender on hover */
+}
+
+/* Cart */
+.cart {
+  font-size: 1.2rem;
+}
+
+/* Main content */
+.main-content {
+  padding: 4rem 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #ff005e;
+  /* Neon red */
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e60053;
 }
