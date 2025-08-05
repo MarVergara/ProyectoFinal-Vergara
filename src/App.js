@@ -10,7 +10,7 @@ function App() {
 
       <main className="main-content">
         <ItemListContainer heading="The PMO flower shop" />
-        <button className="cta-button">Shop Now</button>
+        <button className="cta-button">Shop now</button>
       </main>
     </div>
   );
