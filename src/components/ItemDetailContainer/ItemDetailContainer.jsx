@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductById } from "../../data/products";
+import { useCart } from "../../context/CartContext";
 
 function ItemCount({ onAdd }) {
   const [qty, setQty] = useState(1);
@@ -18,6 +19,7 @@ export const ItemDetailContainer = () => {
   const { itemId } = useParams();
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     setLoading(true);
@@ -35,7 +37,12 @@ export const ItemDetailContainer = () => {
       <h2>{item.title}</h2>
       <p>Category: {item.category}</p>
       <p>Price: ${item.price}</p>
-      <ItemCount onAdd={(q) => alert(`Added ${q} item(s) to cart`)} />
+      <ItemCount
+        onAdd={(q) => {
+          addToCart(q, item.price);
+          alert(`Added ${q} item(s) to cart`);
+        }}
+      />
     </div>
   );
 };

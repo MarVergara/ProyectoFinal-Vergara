@@ -1,8 +1,11 @@
-// src/components/CartWidget.jsx
+import { useCart } from "../../context/CartContext";
+
 export const CartWidget = () => {
+  const { count, total } = useCart();
+  const formatted = `$${total.toFixed(2)}`;
   return (
-    <div>
-      <span>🛒3</span>
+    <div title="Cart">
+      <span>🛒 {count} • {formatted}</span>
     </div>
   );
 };

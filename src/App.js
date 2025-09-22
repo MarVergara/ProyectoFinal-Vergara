@@ -5,6 +5,7 @@ import { NavBar } from "./components/NavBar/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { Contact } from "./components/Contact/Contact";
+import { CartProvider } from "./context/CartContext";
 
 function NotFound() {
   return <h2 style={{ padding: 16 }}>404 - Page not found</h2>;
@@ -12,7 +13,8 @@ function NotFound() {
 
 export default function App() {
   return (
-    <>
+    <CartProvider>
+      {" "}
       <NavBar />
       <main className="main-content">
         <Routes>
@@ -23,6 +25,6 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-    </>
+    </CartProvider>
   );
 }

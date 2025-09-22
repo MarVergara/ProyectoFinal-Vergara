@@ -1,10 +1,11 @@
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./navBar.css";
 import logo from "../../assets/logo.png";
 import { CartWidget } from "../CartWidget/CartWidget";
+import { useCart } from "../../context/CartContext";
 
 export const NavBar = () => {
-  const active = ({ isActive }) => (isActive ? "active" : "");
+  const { resetCart } = useCart();
 
   return (
     <nav className="navbar">
@@ -15,14 +16,19 @@ export const NavBar = () => {
       </div>
 
       <div className="navbar-links">
-        <NavLink to="/" end className={active}>Home</NavLink> {" | "}
-        <NavLink to="/category/bouquets" className={active}>Bouquets</NavLink> {" | "}
-        <NavLink to="/category/indoor" className={active}>Indoor Plants</NavLink> {" | "}
-        <NavLink to="/category/succulents" className={active}>Succulents</NavLink> {" | "}
-        <NavLink to="/contact" className={active}>Reach out</NavLink>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/category/bouquets">Bouquets</Link> |{" "}
+        <Link to="/category/indoor">Indoor Plants</Link> |{" "}
+        <Link to="/category/succulents">Succulents</Link> |{" "}
+        <Link to="/contact">Reach out</Link>
       </div>
 
-      <CartWidget />
+      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        <CartWidget />
+        <button onClick={resetCart} className="cta-button" style={{ padding: "0.4rem 0.8rem" }}>
+          Reset cart
+        </button>
+      </div>
     </nav>
   );
 };
