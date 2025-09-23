@@ -2,10 +2,14 @@ import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar/NavBar";
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
-import { Contact } from "./components/Contact/Contact";
+import Products from "./pages/Products";
+import Catalog from "./pages/Catalog";
+import ItemDetail from "./pages/ItemDetail";
+import Contact from "./pages/Contact";
 import { CartProvider } from "./context/CartContext";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function NotFound() {
   return <h2 style={{ padding: 16 }}>404 - Page not found</h2>;
@@ -18,9 +22,12 @@ export default function App() {
       <NavBar />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<ItemListContainer heading="Product catalog" />} />
-          <Route path="/category/:categoryId" element={<ItemListContainer heading="Products by category" />} />
-          <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/category/:categoryId" element={<Catalog heading="Products by category" />} />
+          <Route path="/item/:itemId" element={<ItemDetail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
