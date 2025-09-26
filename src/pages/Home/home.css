@@ -1,0 +1,88 @@
+.home {
+    display: grid;
+    gap: 24px;
+}
+
+
+.hero {
+    padding: 2.5rem 1rem;
+    background: linear-gradient(135deg, #faf5ff 0%, #f0e7ff 100%);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.hero-title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.hero-subtitle {
+    margin: 8px 0 16px;
+    color: #333;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    border: 1px solid #8a2be2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.usps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.usp-card {
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.usp-card h3 {
+    margin: 0 0 6px;
+}
+
+.usp-card p {
+    margin: 0;
+    color: #444;
+}
+
+.categories-title {
+    margin: 0 0 12px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pill {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #8a2be2;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

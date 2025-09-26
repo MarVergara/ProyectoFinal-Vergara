@@ -7,5 +7,6 @@ export const CartWidget = () => {
     <div title="Cart">
       <span>🛒 {count} • {formatted}</span>
     </div>
+    
   );
 };

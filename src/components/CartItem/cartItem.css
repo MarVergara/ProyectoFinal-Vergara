@@ -1,0 +1,35 @@
+.ci-item {
+    display: grid;
+    grid-template-columns: 96px 1fr auto auto;
+    gap: 12px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.ci-thumb {
+    width: 96px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.ci-info {
+    display: grid;
+    gap: 2px;
+    color: #333;
+}
+
+.ci-subtotal {
+    font-weight: 600;
+}
+
+.ci-remove {
+    border: none;
+    background: none;
+    color: #8a2be2;
+    font-weight: 600;
+    cursor: pointer;
+}

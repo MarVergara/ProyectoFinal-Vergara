@@ -1,0 +1,39 @@
+.contact {
+    padding: 1.5rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    margin-bottom: 8px;
+}
+
+.contact-lead {
+    margin: 0 0 16px;
+    color: #333;
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-form label span {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 8px 10px;
+}
+
+.contact-submit {
+    justify-self: start;
+}
+
+.contact-info {
+    margin-top: 24px;
+    color: #555;
+}

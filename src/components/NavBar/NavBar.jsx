@@ -15,13 +15,16 @@ export const NavBar = () => {
         </Link>
       </div>
 
-      <div className="navbar-links">
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/category/bouquets">Bouquets</Link> |{" "}
-        <Link to="/category/indoor">Indoor Plants</Link> |{" "}
-        <Link to="/category/succulents">Succulents</Link> |{" "}
-        <Link to="/contact">Reach out</Link>
-      </div>
+    <div className="navbar-links">
+      <Link to="/">Home</Link> |{" "}
+      <Link to="/products">Products</Link> |{" "}
+      <Link to="/category/bouquets">Bouquets</Link> |{" "}
+      <Link to="/category/indoor">Indoor Plants</Link> |{" "}
+      <Link to="/category/succulents">Succulents</Link> |{" "}
+      <Link to="/checkout">Checkout</Link> |{" "}
+      <Link to="/contact">Contact</Link>
+    </div>
+
 
       <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
         <CartWidget />

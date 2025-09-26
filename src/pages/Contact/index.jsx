@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "./contact.css";
 
-export const Contact = () => {
+export default function Contact() {
   const [values, setValues] = useState({ name: "", email: "", message: "" });
 
   function handleChange(e) {
@@ -10,21 +11,20 @@ export const Contact = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Minimum behavior for this delivery: simple confirmation
     alert(`Thanks, ${values.name || "there"}! We’ll get back to you at ${values.email || "your email"}.`);
     setValues({ name: "", email: "", message: "" });
   }
 
   return (
-    <section style={{ padding: "1.5rem", maxWidth: 640, margin: "0 auto" }}>
-      <h1 style={{ marginBottom: 8 }}>Contact</h1>
-      <p style={{ marginBottom: 16 }}>
+    <section className="contact">
+      <h1 className="contact-title">Contact</h1>
+      <p className="contact-lead">
         Have a question about our flowers? Send us a message and we’ll reply soon.
       </p>
 
-      <form onSubmit={handleSubmit} style={{ display: "grid", gap: 12 }}>
+      <form onSubmit={handleSubmit} className="contact-form">
         <label>
-          <span style={{ display: "block", marginBottom: 4 }}>Name</span>
+          <span>Name</span>
           <input
             type="text"
             name="name"
@@ -32,12 +32,12 @@ export const Contact = () => {
             onChange={handleChange}
             placeholder="Your name"
             required
-            style={{ width: "100%", padding: "8px 10px" }}
+            className="contact-input"
           />
         </label>
 
         <label>
-          <span style={{ display: "block", marginBottom: 4 }}>Email</span>
+          <span>Email</span>
           <input
             type="email"
             name="email"
@@ -45,28 +45,28 @@ export const Contact = () => {
             onChange={handleChange}
             placeholder="you@example.com"
             required
-            style={{ width: "100%", padding: "8px 10px" }}
+            className="contact-input"
           />
         </label>
 
         <label>
-          <span style={{ display: "block", marginBottom: 4 }}>Message</span>
+          <span>Message</span>
           <textarea
             name="message"
             value={values.message}
             onChange={handleChange}
             placeholder="How can we help?"
             rows={5}
-            style={{ width: "100%", padding: "8px 10px" }}
+            className="contact-textarea"
           />
         </label>
 
-        <button type="submit" className="cta-button" style={{ justifySelf: "start" }}>
+        <button type="submit" className="cta-button contact-submit">
           Send
         </button>
       </form>
 
-      <div style={{ marginTop: 24, color: "#555" }}>
+      <div className="contact-info">
         <p><strong>Email:</strong> hello@pmoflowershop.example</p>
         <p><strong>Phone:</strong> +351 012-3456</p>
         <p><strong>Hours:</strong> Mon–Fri, 9:00–18:00</p>
@@ -74,4 +74,4 @@ export const Contact = () => {
       </div>
     </section>
   );
-};
+}

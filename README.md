@@ -1,18 +1,22 @@
-# PMO — Flowershop (React + Firebase)
+# PMO — Flower Shop (React + Firebase)
 
-SPA e-commerce built with React Router, Context, and Firestore.
+Minimal e-commerce built with React, React Router, Context, and Cloud Firestore.
 
 ## Run
-- `npm install`
-- Create `.env` with your Firebase config (VITE_ or REACT_APP_ vars).
-- `npm start`
+1. `npm install`
+2. Add your Firebase config to `.env` (CRA or Vite). Example keys:
+   - REACT_APP_FIREBASE_API_KEY, REACT_APP_FIREBASE_AUTH_DOMAIN, REACT_APP_FIREBASE_PROJECT_ID, REACT_APP_FIREBASE_STORAGE_BUCKET, REACT_APP_FIREBASE_MESSAGING_SENDER_ID, REACT_APP_FIREBASE_APP_ID
+3. `npm start`
 
-## Features
-- Catalog & detail from Firestore (with category filtering)
-- Cart (Context): items, qty, subtotal, total; remove/clear
-- Checkout: writes order to Firestore and shows order ID
-- Routing: Home, Products, /category/:categoryId, /item/:itemId, Cart, Checkout, Contact, 404
+## Routes
+- `/` Home
+- `/products` All products
+- `/category/:categoryId` Catalog by category
+- `/item/:itemId` Product details
+- `/checkout` Create order, shows order ID
+- `/contact` Contact
+- `*` 404
 
 ## Notes
-- Images use direct URLs (i.ibb.co or similar).
-- Firestore rules allow reads and orders creation for demo.
+- Products + orders are stored in **Firestore**.
+- For local dev, allow reads and order creation in Firestore rules.

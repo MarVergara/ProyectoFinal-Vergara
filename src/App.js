@@ -8,7 +8,6 @@ import ItemDetail from "./pages/ItemDetail";
 import Contact from "./pages/Contact";
 import { CartProvider } from "./context/CartContext";
 import Home from "./pages/Home";
-import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 
 function NotFound() {
@@ -26,7 +25,6 @@ export default function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/category/:categoryId" element={<Catalog heading="Products by category" />} />
           <Route path="/item/:itemId" element={<ItemDetail />} />
-          <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

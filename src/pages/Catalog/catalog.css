@@ -1,0 +1,31 @@
+.catalog {
+    padding: 16px;
+}
+
+.catalog h1 {
+    margin: 0 0 6px;
+}
+
+.catalog h2 {
+    margin: 0 0 12px;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.catalog-empty,
+.catalog-loading,
+.catalog-error {
+    padding: 16px 0;
+}
+
+.catalog-error {
+    color: crimson;
+}
