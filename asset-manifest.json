@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ProyectoFinal-Vergara/static/css/main.06cef07f.css",
+    "main.js": "/ProyectoFinal-Vergara/static/js/main.9158fe2a.js",
+    "static/media/logo.png": "/ProyectoFinal-Vergara/static/media/logo.46ec7fc6b4da28b77601.png",
+    "static/media/fallback-flower.png": "/ProyectoFinal-Vergara/static/media/fallback-flower.ff7807ab1ccc04307ff2.png",
+    "index.html": "/ProyectoFinal-Vergara/index.html",
+    "main.06cef07f.css.map": "/ProyectoFinal-Vergara/static/css/main.06cef07f.css.map",
+    "main.9158fe2a.js.map": "/ProyectoFinal-Vergara/static/js/main.9158fe2a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06cef07f.css",
+    "static/js/main.9158fe2a.js"
+  ]
+}
