@@ -19,3 +19,13 @@
 .navbar-links a:hover {
     text-decoration: underline;
 }
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.reset-btn {
+    padding: 0.4rem 0.8rem;
+}

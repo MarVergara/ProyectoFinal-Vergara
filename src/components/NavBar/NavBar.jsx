@@ -5,7 +5,7 @@ import { CartWidget } from "../CartWidget/CartWidget";
 import { useCart } from "../../context/CartContext";
 
 export const NavBar = () => {
-  const { resetCart } = useCart();
+  const { clearCart } = useCart();
 
   return (
     <nav className="navbar">
@@ -15,20 +15,19 @@ export const NavBar = () => {
         </Link>
       </div>
 
-    <div className="navbar-links">
-      <Link to="/">Home</Link> |{" "}
-      <Link to="/products">Products</Link> |{" "}
-      <Link to="/category/bouquets">Bouquets</Link> |{" "}
-      <Link to="/category/indoor">Indoor Plants</Link> |{" "}
-      <Link to="/category/succulents">Succulents</Link> |{" "}
-      <Link to="/checkout">Checkout</Link> |{" "}
-      <Link to="/contact">Contact</Link>
-    </div>
+      <div className="navbar-links">
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/products">Products</Link> |{" "}
+        <Link to="/category/bouquets">Bouquets</Link> |{" "}
+        <Link to="/category/indoor">Indoor Plants</Link> |{" "}
+        <Link to="/category/succulents">Succulents</Link> |{" "}
+        <Link to="/checkout">Checkout</Link> |{" "}
+        <Link to="/contact">Contact</Link>
+      </div>
 
-
-      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+      <div className="navbar-actions">
         <CartWidget />
-        <button onClick={resetCart} className="cta-button" style={{ padding: "0.4rem 0.8rem" }}>
+        <button onClick={clearCart} className="cta-button reset-btn">
           Reset cart
         </button>
       </div>
