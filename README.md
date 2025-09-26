@@ -4,7 +4,7 @@ Minimal e-commerce built with React, React Router, Context, and Cloud Firestore.
 
 ## LINK TO PROJECT
 
-👉 Link to the [**🌼 PMO - FLOWERSHOP**](https://marvergara.github.io/ProyectoFinal-Vergara/)
+👉 Link to the [**🌼 PMO - FLOWERSHOP PAGE**](https://marvergara.github.io/ProyectoFinal-Vergara/).
 
 
 ## Run
